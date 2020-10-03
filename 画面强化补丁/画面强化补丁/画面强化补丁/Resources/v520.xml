@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <GraphicsConfig>
 	<GUIColour>
-        <Default>
-            <LocalisationName>Standard</LocalisationName>
-            <MatrixRed> 1, 0, 0 </MatrixRed>
-            <MatrixGreen> 0, 1, 0 </MatrixGreen>
-            <MatrixBlue> 0, 0, 1 </MatrixBlue>
-        </Default>
-    </GUIColour>
+		<Default>
+			<LocalisationName>Standard</LocalisationName>
+			<MatrixRed> 1, 0, 0 </MatrixRed>
+			<MatrixGreen> 0, 1, 0 </MatrixGreen>
+			<MatrixBlue> 0, 0, 1 </MatrixBlue>
+		</Default>
+	</GUIColour>
 	<MinimumAspectRatio>1.0</MinimumAspectRatio>
 	<HDRNode>
 		<KeyValue>0.500000</KeyValue>
@@ -36,7 +36,7 @@
 		<ExposureThreshold>-0.6</ExposureThreshold>
 		<Percentiles>0.0100,0.1400,1.9000</Percentiles>
 		<ManualExposure>-0.6</ManualExposure>
-		<GlareCompensation>0.45</GlareCompensation>
+		<GlareCompensation>0.75</GlareCompensation>
 		<ShoulderStrength>0.250000</ShoulderStrength>
 		<LinearStrength>0.5000</LinearStrength>
 		<LinearAngle>0.1000</LinearAngle>
@@ -57,16 +57,16 @@
 		<Saturation>0.150000</Saturation>
 		<Scale>4.000000</Scale>
 	</IBL>
-    <HBAO>
-        <High>
+	<HBAO>
+		<High>
 			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
 			<Enabled>true</Enabled>
-			<RadiusInMeters>11.4</RadiusInMeters>
+			<RadiusInMeters>10.4</RadiusInMeters>
 			<NearRadiusInMeters>4.1</NearRadiusInMeters>
 			<NearDistance>190.0</NearDistance>
 			<PowExponent>2.4</PowExponent>
-			<Bias>0.54</Bias>
-			<BlurSharpness>4.5</BlurSharpness>
+			<Bias>0.34</Bias>
+			<BlurSharpness>3.5</BlurSharpness>
 			<MultiSampleCount>1</MultiSampleCount>
 			<SSAOColour_R>1.0</SSAOColour_R>
 			<SSAOColour_G>2.0</SSAOColour_G>
@@ -77,8 +77,8 @@
 			<AffectDiffuse>1.0</AffectDiffuse>
 			<AffectSpecular>1.0</AffectSpecular>
 			<ResolutionScale>1.0</ResolutionScale>
-        </High>
-    </HBAO>
+		</High>
+	</HBAO>
 	<Bloom>
 		<Ultra>
 			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
@@ -131,41 +131,41 @@
 	</FX>
 	<Debris>
 		<High>
-	  		<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	  		<DebrisLimit>3000</DebrisLimit>
-	  	</High>
-    </Debris>
+			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
+			<DebrisLimit>3000</DebrisLimit>
+		</High>
+	</Debris>
 	<LensFlares>
 		<High>
 			<Enabled>false</Enabled>
 		</High>
 	</LensFlares>
 	<LightCones>
-      <High>
-        <LocalisationName>$QUALITY_HIGH;</LocalisationName>
-        <Enabled>true</Enabled>
-        <Volumetric>true</Volumetric>
-      </High>
-    </LightCones>
+		<High>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<Enabled>true</Enabled>
+			<Volumetric>true</Volumetric>
+		</High>
+	</LightCones>
 	<JetCones>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<StepsPerPixel>8</StepsPerPixel>
-	  		<DownscalingFactor>0</DownscalingFactor>
-	  	</High>
-	  	<Ultra>
-	  		<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	  		<StepsPerPixel>12</StepsPerPixel>
-	  		<DownscalingFactor>0</DownscalingFactor>
-	  	</Ultra>
-    </JetCones>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<StepsPerPixel>8</StepsPerPixel>
+			<DownscalingFactor>0</DownscalingFactor>
+		</High>
+		<Ultra>
+			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
+			<StepsPerPixel>12</StepsPerPixel>
+			<DownscalingFactor>0</DownscalingFactor>
+		</Ultra>
+	</JetCones>
 	<Planets>
 		<Ultra>
 			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	        <TextureSize>8192</TextureSize>
-	        <AtmosphereSteps>7</AtmosphereSteps>
-	        <CloudsEnabled>true</CloudsEnabled>
-	        <WorkPerFrame>512</WorkPerFrame>
+			<TextureSize>8192</TextureSize>
+			<AtmosphereSteps>7</AtmosphereSteps>
+			<CloudsEnabled>true</CloudsEnabled>
+			<WorkPerFrame>512</WorkPerFrame>
 			<TexturePoolBudget>100</TexturePoolBudget>
 		</Ultra>
 	</Planets>
@@ -173,7 +173,7 @@
 		<High>
 			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
 			<TextureSize>4096</TextureSize>
-	    </High>
+		</High>
 	</GalaxyBackground>
 	<Envmap>
 		<High>
@@ -184,40 +184,40 @@
 	</Envmap>
 	<DamageDecals>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<ShipMaxTrails>20</ShipMaxTrails>
-	  		<AsteroidMaxTrails>50</AsteroidMaxTrails>
-	  		<PlanetMaxTrails>160</PlanetMaxTrails>
-	  		<ShipMaxTrailSegments>100</ShipMaxTrailSegments>
-	  		<AsteroidMaxTrailSegments>100</AsteroidMaxTrailSegments>
-	  		<PlanetMaxTrailSegments>100</PlanetMaxTrailSegments>
-	  		<ShipMaxSingleDecalsPerCollection>50</ShipMaxSingleDecalsPerCollection>
-	  		<AsteroidMaxSingleDecalsPerCollection>50</AsteroidMaxSingleDecalsPerCollection>
-	  		<PlanetMaxSingleDecalsPerCollection>50</PlanetMaxSingleDecalsPerCollection>
-	  		<ShipMaxSingleDecalCollections>1</ShipMaxSingleDecalCollections>
-	  		<AsteroidMaxSingleDecalCollections>2</AsteroidMaxSingleDecalCollections>
-	  		<PlanetMaxSingleDecalCollections>3</PlanetMaxSingleDecalCollections>
-	  		<TrailHeightScale>1.0</TrailHeightScale>
-	  		<Enabled>true</Enabled>
-	  	</High>
-    </DamageDecals>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<ShipMaxTrails>20</ShipMaxTrails>
+			<AsteroidMaxTrails>50</AsteroidMaxTrails>
+			<PlanetMaxTrails>160</PlanetMaxTrails>
+			<ShipMaxTrailSegments>100</ShipMaxTrailSegments>
+			<AsteroidMaxTrailSegments>100</AsteroidMaxTrailSegments>
+			<PlanetMaxTrailSegments>100</PlanetMaxTrailSegments>
+			<ShipMaxSingleDecalsPerCollection>50</ShipMaxSingleDecalsPerCollection>
+			<AsteroidMaxSingleDecalsPerCollection>50</AsteroidMaxSingleDecalsPerCollection>
+			<PlanetMaxSingleDecalsPerCollection>50</PlanetMaxSingleDecalsPerCollection>
+			<ShipMaxSingleDecalCollections>1</ShipMaxSingleDecalCollections>
+			<AsteroidMaxSingleDecalCollections>2</AsteroidMaxSingleDecalCollections>
+			<PlanetMaxSingleDecalCollections>3</PlanetMaxSingleDecalCollections>
+			<TrailHeightScale>1.0</TrailHeightScale>
+			<Enabled>true</Enabled>
+		</High>
+	</DamageDecals>
 	<SurfaceRocks>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<TinySurfaceRockCount>2000</TinySurfaceRockCount>
-	  	</High>
-    </SurfaceRocks>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<TinySurfaceRockCount>2048</TinySurfaceRockCount>
+		</High>
+	</SurfaceRocks>
 	<ParticleEffects>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<AllowedEffects>
-	  			<Item>P1</Item>
-	  			<Item>P2</Item>
-	  			<Item>P3</Item>
-	  		</AllowedEffects>
-	  		<AllowThrusterDowndraft>1</AllowThrusterDowndraft>
-	  	</High>
-    </ParticleEffects>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<AllowedEffects>
+				<Item>P1</Item>
+				<Item>P2</Item>
+				<Item>P3</Item>
+			</AllowedEffects>
+			<AllowThrusterDowndraft>1</AllowThrusterDowndraft>
+		</High>
+	</ParticleEffects>
 	<Trails>
 		<High>
 			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
@@ -255,64 +255,64 @@
 	</Fog>
 	<Beams>
 		<High>
-	  		<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	  		<EnableBeamLights>1</EnableBeamLights>
-	  	</High>
-  	</Beams>
+			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
+			<EnableBeamLights>1</EnableBeamLights>
+		</High>
+	</Beams>
 	<Terrain>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<QualityID>High</QualityID>
-	  		<LODTable>Default</LODTable>
-	  		<PatchLighting>true</PatchLighting>
-	  		<PatchTextures>true</PatchTextures>
-	  		<LODsToDrop>0</LODsToDrop>
-	  	</High>
-	  	<Ultra>
-	  		<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	  		<QualityID>Ultra</QualityID>
-	  		<LODTable>Ultra</LODTable>
-	  		<PatchLighting>true</PatchLighting>
-	  		<PatchTextures>true</PatchTextures>
-	  		<LODsToDrop>0</LODsToDrop>
-	  	</Ultra>
-    </Terrain>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<QualityID>High</QualityID>
+			<LODTable>Default</LODTable>
+			<PatchLighting>true</PatchLighting>
+			<PatchTextures>true</PatchTextures>
+			<LODsToDrop>0</LODsToDrop>
+		</High>
+		<Ultra>
+			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
+			<QualityID>Ultra</QualityID>
+			<LODTable>Ultra</LODTable>
+			<PatchLighting>true</PatchLighting>
+			<PatchTextures>true</PatchTextures>
+			<LODsToDrop>0</LODsToDrop>
+		</Ultra>
+	</Terrain>
 	<TerrainLodBlending>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<PatchMorphing>1</PatchMorphing>
-	  	</High>
-	  	<Ultra>
-	  		<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	  		<PatchMorphing>2</PatchMorphing>
-	  	</Ultra>
-    </TerrainLodBlending>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<PatchMorphing>1</PatchMorphing>
+		</High>
+		<Ultra>
+			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
+			<PatchMorphing>2</PatchMorphing>
+		</Ultra>
+	</TerrainLodBlending>
 	<SurfaceMaterial>
 		<High>
-	  		<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-	  		<SurfaceMaterialQuality>7</SurfaceMaterialQuality>
-	  	</High>
-	  	<Ultra>
-	  		<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
-	  		<SurfaceMaterialQuality>9</SurfaceMaterialQuality>
-	  	</Ultra>
-    </SurfaceMaterial>
+			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
+			<SurfaceMaterialQuality>7</SurfaceMaterialQuality>
+		</High>
+		<Ultra>
+			<LocalisationName>$QUALITY_ULTRA;</LocalisationName>
+			<SurfaceMaterialQuality>9</SurfaceMaterialQuality>
+		</Ultra>
+	</SurfaceMaterial>
 	<GalaxyMap>
 		<High>
 			<LocalisationName>$QUALITY_HIGH;</LocalisationName>
-			<NebulasCount>20</NebulasCount>
-			<NebulasInBackgroundCount>30</NebulasInBackgroundCount>
+			<NebulasCount>40</NebulasCount>
+			<NebulasInBackgroundCount>40</NebulasInBackgroundCount>
 			<HighResNebulasCount>20</HighResNebulasCount>
 			<LowResNebulaDimensions>256</LowResNebulaDimensions>
 			<HighResNebulaDimensions>512</HighResNebulaDimensions>
 			<LowResSamplesCount>64</LowResSamplesCount>
 			<HighResSamplesCount>138</HighResSamplesCount>
-			<LocalDustBrightness>0.0</LocalDustBrightness>
+			<LocalDustBrightness>-0.05</LocalDustBrightness>
 			<MilkyWayInstancesCount>24000</MilkyWayInstancesCount>
-			<MilkywayInstancesBrightness>0.54</MilkywayInstancesBrightness>
+			<MilkywayInstancesBrightness>0.31</MilkywayInstancesBrightness>
 			<MilkywayInstancesSize>0.9</MilkywayInstancesSize>
 			<MilkyWayInstancesOffscreenRTEnabled>false</MilkyWayInstancesOffscreenRTEnabled>
-			<StarInstanceCount>48000</StarInstanceCount>
+			<StarInstanceCount>32768</StarInstanceCount>
 		</High>
 	</GalaxyMap>
 	<Volumetrics>

@@ -120,7 +120,7 @@
     <None Include="Resources\2e6f824ab6c94dda03bd1cfea662bcd304f3dfb5.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\v513.xml" />
+    <EmbeddedResource Include="Resources\v520.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("画面强化补丁")]
 [assembly: AssemblyDescription("用于精英危险（Elite：Dangerous）的一款应用程序")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("我是一个穷逼，我开不起公司")]
+[assembly: AssemblyCompany("冰月")]
 [assembly: AssemblyProduct("画面强化补丁")]
 [assembly: AssemblyCopyright("冰月 Copyright ©  2020")]
 [assembly: AssemblyTrademark("没得")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("5.0.2.0")]
+[assembly: AssemblyFileVersion("5.0.2.0")]

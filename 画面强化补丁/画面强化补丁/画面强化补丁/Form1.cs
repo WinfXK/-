@@ -11,13 +11,16 @@ namespace 画面强化补丁
     public partial class Form1 : Form
     {
         private static readonly String DirName = "C:\\Users\\" + System.Environment.UserName + "\\AppData\\Local\\Frontier Developments\\Elite Dangerous\\Options\\Graphics\\";
-        private readonly String  BakFileName = DirName+"GraphicsConfigurationOverride.xml.bak";
+        private readonly String BakFileName = DirName+"GraphicsConfigurationOverride.xml.bak";
         private readonly String DataFileName= DirName+"\\GraphicsConfigurationOverride.xml";
-        private readonly String MyDataFileName = "v513.xml";
+        private readonly String MyDataFileName = "v520.xml";
+        private readonly String SettingXml = DirName + "Settings.xml";
+        private readonly String BakSettingXml = DirName + "Settings.xml.bak";
+        private readonly String s= "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><GraphicsOptions><Version>1</Version><PresetName>Custom</PresetName><StereoscopicMode>0</StereoscopicMode><IPDAmount>0.001000</IPDAmount><AMDCrashFix>false</AMDCrashFix><FOV>72.000000</FOV><HighResScreenCapAntiAlias>3</HighResScreenCapAntiAlias><HighResScreenCapScale>4</HighResScreenCapScale><GammaOffset>0.000000</GammaOffset><DisableGuiEffects>false</DisableGuiEffects><StereoFocalDistance>25.000000</StereoFocalDistance><StencilDump>false</StencilDump><ShaderWarming>true</ShaderWarming><VehicleMotionBlackout>false</VehicleMotionBlackout><VehicleMaintainHorizonCamera>false</VehicleMaintainHorizonCamera><DisableCameraShake>false</DisableCameraShake></GraphicsOptions>";
         public Form1()
         {
             InitializeComponent();
-            if (!File.Exists(BakFileName))
+            if (!File.Exists(BakFileName)&&!File.Exists(BakSettingXml))
             {
                 button1.Hide();
             }
@@ -33,7 +36,7 @@ namespace 画面强化补丁
         }
         private void VUpdate()
         {
-            String s = DoGetRequestSendData("http://ed.Winfxk.cn/upv.php?v=1");
+            String s = DoGetRequestSendData("http://ed.Winfxk.cn/upv.php?v=2");
             if (s == null || s.Equals(""))
                 return;
             if (s.Equals("true"))
@@ -77,19 +80,27 @@ namespace 画面强化补丁
         {
             if (!Directory.Exists(DirName))
                 Directory.CreateDirectory(DirName);
-            FileInfo f1 = new FileInfo(DataFileName);
             if (!File.Exists(BakFileName)&&File.Exists(DataFileName))
             {
+                FileInfo f1 = new FileInfo(DataFileName);
                 f1.CopyTo(BakFileName, true);
             }
-            File.Delete(DataFileName);
             Assembly assm = Assembly.GetExecutingAssembly();
-            Stream istr = assm.GetManifestResourceStream("画面强化补丁.Resources."+MyDataFileName);
-            System.IO.StreamReader sr = new System.IO.StreamReader(istr);
             StreamWriter w = new StreamWriter(DataFileName);
-            w.Write(sr.ReadToEnd());
+            w.Write(new System.IO.StreamReader(assm.GetManifestResourceStream("画面强化补丁.Resources." + MyDataFileName)).ReadToEnd());
             w.Close();
-            if (!File.Exists(BakFileName))
+            if (checkBox1.Checked)
+            {
+                if (!File.Exists(BakSettingXml) && File.Exists(SettingXml))
+                {
+                    FileInfo f2 = new FileInfo(SettingXml);
+                    f2.CopyTo(BakSettingXml, true);
+                }
+                StreamWriter xw = new StreamWriter(SettingXml);
+                xw.Write(s);
+                xw.Close();
+            }
+            if (!File.Exists(BakFileName) && !File.Exists(BakSettingXml))
             {
                 button1.Hide();
             }
@@ -104,16 +115,24 @@ namespace 画面强化补丁
         {
             if (!Directory.Exists(DirName))
                 Directory.CreateDirectory(DirName);
-            if (!File.Exists(BakFileName))
+            if (!File.Exists(BakFileName) && !File.Exists(BakSettingXml))
             {
                 MessageBox.Show("未找到备份数据！", "提示");
                 return;
             }
             else
             {
-                FileInfo f2 = new FileInfo(BakFileName);
-                f2.CopyTo(DataFileName, true);
-                File.Delete(BakFileName);
+                if (File.Exists(BakFileName)) { 
+                    FileInfo f2 = new FileInfo(BakFileName);
+                    f2.CopyTo(DataFileName, true);
+                    File.Delete(BakFileName);
+                 }
+                if (File.Exists(BakSettingXml))
+                {
+                    FileInfo fw = new FileInfo(BakSettingXml);
+                    fw.CopyTo(SettingXml,true);
+                    File.Delete(BakSettingXml);
+                }
                 if (!File.Exists(BakFileName))
                 {
                     button1.Hide();

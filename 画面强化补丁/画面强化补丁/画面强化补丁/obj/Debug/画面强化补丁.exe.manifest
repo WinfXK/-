@@ -4,7 +4,7 @@
   <description asmv2:iconFile="QQ图片20200917193733.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="画面强化补丁" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="画面强化补丁" version="5.0.2.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="画面强化补丁.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="画面强化补丁.exe" size="2853264">
-      <assemblyIdentity name="画面强化补丁" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="画面强化补丁.exe" size="2855824">
+      <assemblyIdentity name="画面强化补丁" version="5.0.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3vC0BBduKwsAPb1rgRbIX+mCpUdzHhy54Ewt1ITu+rw=</dsig:DigestValue>
+        <dsig:DigestValue>UQUpgd0IBkNKaVNMuctnuFpf1u83I3+r0Ft4BUmnkVQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CN\画面强化补丁.resources.dll" size="141312">
-      <assemblyIdentity name="画面强化补丁.resources" version="1.0.0.0" language="zh-CN" processorArchitecture="msil" />
+      <assemblyIdentity name="画面强化补丁.resources" version="5.0.2.0" language="zh-CN" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s9d+Uwzf3nnKJFvSoAgToUZ9PaJ1ee+h4kzTbToRV5c=</dsig:DigestValue>
+        <dsig:DigestValue>+HJQMBy21/ou6H8YW8SGWHtCkv2yNmpA3KIVYVU/7wg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
